@@ -4,7 +4,6 @@
 
 > [TensorFlow Docs](https://github.com/xitu/tensorflow-docs) 是由[掘金翻译计划](https://github.com/xitu/gold-miner)实时维护的 TensorFlow 官方文档中文版，维护者为全球各大公司开发人员和各著名高校研究者及学生。欢迎大家加入维护团队，欢迎提 Issue 和 PR，参与之前请阅读[文档维护说明](https://github.com/xitu/tensorflow-docs/wiki#%E6%96%87%E6%A1%A3%E7%BB%B4%E6%8A%A4%E8%A7%84%E8%8C%83)。
 >
-> - [TensorFlow 中文文档已更新至 V1.8](https://github.com/xitu/tensorflow-docs)
 > - 阅读文档请到 👉 https://tensorflow.juejin.im
 > - 推荐学习顺序等更多内容详见：[TensorFlow Docs WIKI](https://github.com/xitu/tensorflow-docs/wiki)
 > - 相关术语表：[TensorFlow 术语表](https://github.com/xitu/tensorflow-docs/wiki/TensorFlow-%E6%9C%AF%E8%AF%AD%E8%A1%A8)，[人工智能术语表](https://github.com/xitu/tensorflow-docs/wiki#%E6%9C%AF%E8%AF%AD%E8%A1%A8)
@@ -99,6 +98,7 @@ TensorFlow 项目致力于遵守开源软件开发中普遍接受的最佳实践
 [<img src="https://user-images.githubusercontent.com/26959437/37653530-37bd3cde-2c7a-11e8-98d0-749a59194c22.png" width="200px;"/>](https://juejin.im)<br />阅读更多文章或与更多开发者交流请到[掘金](https://juejin.im)，关注[感兴趣的标签](https://juejin.im/subscribe/all)，订阅相关领域实时动态。
 
 [<img src="https://user-images.githubusercontent.com/26959437/37953025-3fa103ae-31d4-11e8-9e55-136b05d7cb96.jpg" width="200px;"/>](https://jizhi.im/index)<br />了解更多人工智能知识请前往[景略集智](https://jizhi.im/index)，想从零开始学习人工智能请前往[景略集智 AI 课堂](https://h5.youzan.com/v2/showcase/homepage?alias=U5eAeeuRD2)。
+<!-- 每月 27 号为合作周期截止日 -->
 
 ## 许可
 
