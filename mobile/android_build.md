@@ -15,7 +15,7 @@
 - 遵循 Android Studio 网站的说明，安装[Android Studio](https://developer.android.com/studio/index.html)。
   
 
-- 从 Github 上克隆 TensorFlow 的仓库：
+- 从 GitHub 上克隆 TensorFlow 的仓库：
 
         git clone https://github.com/tensorflow/tensorflow
 
@@ -23,7 +23,7 @@
 
 1.  打开 Android Studio，在欢迎界面中选择 **Open an existing Android Studio project**。
 
-2. 从 **Open File or Project** 窗口中，切换文件目录并选择`tensorflow/examples/android` 目录，这个目录在你克隆的 TensorFlow 的 Github repo 中, 点击 OK。
+2. 从 **Open File or Project** 窗口中，切换文件目录并选择`tensorflow/examples/android` 目录，这个目录在你克隆的 TensorFlow 的 GitHub repo 中, 点击 OK。
 
     如果，IDE 需要去同步 Gradle，点击 OK。
 
@@ -34,7 +34,7 @@
         // set to 'bazel', 'cmake', 'makefile', 'none'
         def nativeBuildSystem = 'none'
 
-4. 点击启动按钮（绿色的箭头）或者从顶部菜单使用 **Run -> Run 'android'**。
+4. 点击 *Run* 按钮（绿色的箭头）或从顶部菜单选择 *Run > Run 'android'* 。你可能需要使用 *Build > Rebuild Project* 来重建项目。
 
 如果它请求你使用 Instant Run，点击**Proceed Without Instant Run**。
 
@@ -60,9 +60,9 @@
 
 ##  使用 Bazel 构建 demo
 
-另一种在 Android 中使用 TensorFlow 的方法是使用 [Bazel](https://bazel.build/) 来构建一个 APK，并且通过 [ADB](https://developer.android.com/studio/command-line/adb.html) 来加载它。这需要一些关于构建系统和 Android 开发者工具的知识，但我们会在这里引导您完成基础步骤。
+另一种在 Android 中使用 TensorFlow 的方法是使用 [Bazel](https://bazel.build/) 来构建一个 APK，并且通过 [ADB](https://developer.android.com/studio/command-line/adb.html) 来加载它。这需要一些关于构建系统和 Android 开发者工具的知识，但我们会在这里引导你完成基础步骤。
 
-- 首先参考 @{$install/install_sources$installing from sources} 的文档。它也会带领你安装 Bazel 和克隆TensorFlow 的代码。
+- 首先参考[通过源码安装 TensorFlow](./install_sources.md) 的文档。它也会带领你安装 Bazel 和克隆TensorFlow 的代码。
 
 - 下载 Android 的 [SDK](https://developer.android.com/studio/index.html)和 [NDK](https://developer.android.com/ndk/download/index.html) 如果你以前没下载它们的话。你需要下载最新的 12b 版本的 NDK，和版本为 23 及以上的 SDK。
 
@@ -85,7 +85,7 @@
 
 [Android 示例代码](https://www.tensorflow.org/code/tensorflow/examples/android/) 是一个单独的项目，这个项目构建和安装三个示例 app，这些 app 都使用相同的底层代码。这些示例程序都是用手机的摄像头作为输入：
 
-- **TF Classify** 标记指向的对象用的是 Inception v3 模型，并用 Imagenet 来分类。在 Imagenet 中有 1000 种分类，它会遗漏大多数日常物品，并且，也包括了你在日常生活中不经常遇到东西，所以结果会是十分有趣的。 举个例子，这里没有『人』类别，因此，让它猜测照片中的人，它会尽可能去猜测人附近的东西， 例如，安全带或者氧气面罩。如果你想定制这个例子去识别你感兴趣的东西，你可以使用[TensorFlow for Poets codelab](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/index.html#0)作为例子，基于自己的数据训练模型。
+- **TF Classify** 标记指向的对象用的是 Inception v3 模型，并用 Imagenet 来分类。在 Imagenet 中有 1000 种分类，它会遗漏大多数日常物品，并且，也包括了你在日常生活中不经常遇到东西，所以结果会是十分有趣的。 举个例子，这里没有『人』类别，因此，让它猜测照片中的人，它会尽可能去猜测人附近的东西， 例如，安全带或者氧气面罩。如果你想定制这个例子去识别你感兴趣的东西，你可以使用 [TensorFlow for Poets codelab](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/index.html#0) 作为例子，基于自己的数据训练模型。
 
 - **TF Detect** 使用多盒模型去尝试画出在人在相机中位置的边界框。这些框对每个侦测结果注释了置信度。结果还不是完美的， 这类的物体侦测仍然是一个活跃的研究话题。这个 demo 也包括了可视追踪，当对象在帧之间移动，这比 TensorFlow 推断的速度要快很多。因为帧率明显加快，可以显著提高用户体验，而且这也能够计算出不同帧中指向相同对象的框，这对在一段时间内统计对象个数起着非常重要的作用。
 
@@ -95,6 +95,6 @@
 
 ### Android 接口库
 
-因为安卓 app 使用 java 编写，但是，TensorFlow 的核心使用的是 c++，TensorFlow 有一个 JNI 库来向两种语言之间提供接口。这个接口的只是针对推理的，因此它提供了加载 graph，设置输入，和运行模型来计算特殊的输出。您可以在 [TensorFlowInferenceInterface.java](https://www.tensorflow.org/code/tensorflow/contrib/android/java/org/tensorflow/contrib/android/TensorFlowInferenceInterface.java) 中查看少量的一组方法的完整文档。
+因为安卓 app 使用 java 编写，但是，TensorFlow 的核心使用的是 c++，TensorFlow 有一个 JNI 库来向两种语言之间提供接口。这个接口的只是针对推理的，因此它提供了加载 graph，设置输入，和运行模型来计算特殊的输出。你可以在 [TensorFlowInferenceInterface.java](https://www.tensorflow.org/code/tensorflow/contrib/android/java/org/tensorflow/contrib/android/TensorFlowInferenceInterface.java) 中查看少量的一组方法的完整文档。
 
-示例程序都是使用这个接口，因此，它们都是学习使用方法的好地方。您可以在 [ci.tensorflow.org](https://ci.tensorflow.org/view/Nightly/job/nightly-android/) 下载预先构建好的二进制 jar 包。
+示例程序都是使用这个接口，因此，它们都是学习使用方法的好地方。你可以在 [ci.tensorflow.org](https://ci.tensorflow.org/view/Nightly/job/nightly-android/) 下载预先构建好的二进制 jar 包。

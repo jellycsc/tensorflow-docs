@@ -1,4 +1,4 @@
-# 安装适用于 C 的 TensorFlow
+# 安装 TensorFlow for C 语言
 
 TensorFlow 在 [`c_api.h`](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/c/c_api.h) 中定义了一套 C 语言 API，用于[构建其它语言的封装](https://www.tensorflow.org/extend/language_bindings)。这套 API 除了使用方便外，还将保持易用性与一致性。
 
@@ -6,25 +6,25 @@ TensorFlow 在 [`c_api.h`](https://github.com/tensorflow/tensorflow/blob/master/
 
 本指南解释了如何安装 TensorFlow C 语言版。尽管本指南也可能适用于其它的安装环境，但我们仅测试（也仅确保）了本指南在以下环境机器中的适用性：
 
- * Linux, 64-bit, x86
- * macOS X, Version 10.12.6 (Sierra) 或更高版本
+  * Linux, 64-bit, x86
+  * macOS X, Version 10.12.6 (Sierra) 或更高版本
 
 ## 安装
 
 请按照以下步骤安装 TensorFlow C 语言库并启用 TensorFlow C 语言版：
 
-  1.确定你是只在 CPU(s) 上运行 TensorFlow C 语言版，还是在 GPU(s) 的协助下运行。如果无法确定，请在以下指南中阅读“决定安装哪个 TensorFlow”一节：
+1. 确定你是只在 CPU(s) 上运行 TensorFlow C 语言版，还是在 GPU(s) 的协助下运行。如果无法确定，请在以下指南中阅读“决定安装哪个 TensorFlow”一节：
 
- * @{$install_linux#determine_which_tensorflow_to_install$Installing TensorFlow on Linux}
- * @{$install_mac#determine_which_tensorflow_to_install$Installing TensorFlow on macOS}
+  *  [在 Ubuntu 上安装 TensorFlow](./install_linux.md#determine_which_tensorflow_to_install)
+  *  [在 macOS 上安装 TensorFlow](./install_mac.md#determine_which_tensorflow_to_install)
 
-  2.通过调用下面的 shell 命令，下载并且解压 TensorFlow 的 C 语言库到 `/usr/local/lib`：
+2. 通过调用下面的 shell 命令，下载并且解压 TensorFlow 的 C 语言库到 `/usr/local/lib`：
   
          TF_TYPE="cpu" # Change to "gpu" for GPU support
          OS="linux" # Change to "darwin" for macOS
          TARGET_DIRECTORY="/usr/local"
          curl -L \
-           "https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-${TF_TYPE}-${OS}-x86_64-1.8.0.tar.gz" |
+           "https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-${TF_TYPE}-${OS}-x86_64-1.10.0.tar.gz" |
            sudo tar -C $TARGET_DIRECTORY -xz
 
 `tar` 命令会将 TensorFlow C 语言库解压到 `TARGET_DIRECTORY` 的子目录 `lib` 中。例如，指定 `/usr/local` 作为 `TARGET_DIRECTORY`，那么 `tar` 就会将 TensorFlow C 语言库解压到 `/usr/local/lib` 中。
